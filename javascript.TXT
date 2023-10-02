@@ -1,0 +1,444 @@
+java Script
+----------------
+- used to given bihaviour to the website
+- can be used in both frontend and backend
+- it is dynamically typed language -datatype of a variable changes dynamically
+- single thread programing language - line by line exicution
+- it accept both procedural as well as object oriented programing
+
+------------------------
+
+1) Display contentfa-spin
+    ---------------------
+    console.log('content')
+    console.log('content',variavle_name)
+
+
+2)datatype
+-------------
+    1)text -string
+    2)integer - number 
+    3)true or false - boolean
+
+3)Variable : used to store datatype
+------------
+    Identifiers:cRules to create variable -
+    -------------
+        a)start with letter (A-Z or a-z) , doller sign($) or underscore(_) but prefer letter
+        b)subsequent character may be letters, digits,underscore or dollersigns 
+        c)two or more word -no space between 
+                            underscore canbe start with capital letter 
+                            number can also be used 
+        d)NMBER canot allowed as thefirst character in names 
+    variable name s are case sensitive 
+
+    Syntax 
+    -------
+    variable_name = value 
+    kyword variable_name = value 
+
+    keyword variables 
+    -----------------
+    1) const : no reassign of value - global scope -no hoisting - redeclaration allowed
+    2) var : can reassign value - functional level scope - hosting allowed - redeclararation not allowed 
+
+    variable hoisting
+    -----------------
+    defining a variable before it is declared
+
+
+4) concatenation
+   -------------
+   datatype + second datatype
+   steing + string = string 
+   number + numbr =number
+   string + numer = string 
+
+5) temperate litarals : provides a easy way to interpolate/insert variables and expression into string
+ ----------------------
+    Syntax
+    ------
+    `text ${variable_name}`
+
+
+6) oprators 
+ ------------
+
+    1)assignment oprators : =
+    2) Arithamatic oprators : + - / * % **
+    3) relational oprators :  > >= < <= == ===
+            ==  envlute only values 
+            === evaluvate both values and datatype 
+    4) logical oprators
+        a) AND &&
+           T && T = T 
+           T && F = F 
+           F && T = F 
+           F && F = F 
+
+        b) OR ||
+           T || F = T 
+           T || T = T 
+           F || T = T 
+           F || F = F
+
+        c) NOT !
+           !T = F 
+           !F = T 
+
+    5)incrimental (++) / decrimental (--) oprators 
+    6)short hand oprators : += -= *= /=
+    7)ternary oprators 
+                condition? true : false
+
+
+7) conditional statement / decision making statement : to take decision based on certain condition
+  ---------------------------------------------------
+  a) if else statement 
+   
+    Syntax
+       
+        if (condition ){
+            statement
+        }
+        else if (condition){
+            statement
+        }else {
+            statement
+        }
+
+8) Looping statement : to do same task repeatedly
+  -------------------
+   
+     1)while 
+        Syntax
+           intialising variable 
+           while(condition){
+            statement to exicute
+            statement to incriment the variable
+           }
+   
+    2)for 
+      Syntax
+        
+        for(intialising : condition : update variable){
+            statement to exicute
+        }
+
+
+9)nestedloop : loop with in a loop - patern printing
+-------------
+
+
+
+
+10)Functions 
+    --------
+    a)function = to do specfic task repeatedly at diffrent portion of the program 
+
+     -it has two part 
+        1)function definition 
+        2)function call 
+
+         function definition 
+         --------------------
+
+         function function_name(arg1.............argn)
+
+     -scope of functional variable is block level 
+     -functional hoisting : calling a function before it is defined 
+
+
+
+     b)Arrow Functions
+      ----------------
+       - Syntax
+          variable_name = (arg1,.............argn) => {statement} 
+
+       - functional hoisting is not possible 
+       -ES6 onwords performed function is arrow function 
+
+
+
+    c) predefined function : not defined by the user/developer but can be called at diffrent part of program
+      -----------------------
+
+      eg: console.log()
+          typeof()
+          alert()
+          parseInt()
+          Number()
+          eval(10*2)
+
+
+    d)call back function 
+     --------------------
+     -calling a function inside another function 
+
+
+     e) Nested function :
+      ------------------
+      - function defining inside another function  definition 
+
+      -closure property : parent property can be accessed by the chiled but the child property cannot be accessed by the parent
+
+
+      synchronous function - execute immediately
+      asynchronus function - time delay
+      Anonymous function - self exicuting function
+
+
+
+DATA STRUCTURE : 
+----------------
+
+-A specialised formate for orgnizing , processing retrieving and storing data 
+- eg: arry , stack  , queue , list ,linked list ,tree ,graph exicute
+
+
+
+11)Array
+  --------
+  - Unlike variable array can hold more than one values/data
+  - Definition : Array is a single variable that can store more than one data of different datatype that are separated by commas and enclosed within square bracket 
+
+
+  -Syntax
+  --------
+    variable_name = [value1,value2,value3.......valuen]
+
+
+ -array can hold more than one dataype 
+ -data are stored as key:value pairs inthe memory 
+          key : index
+          value : array item 
+
+          index = starts from 0 till length -1
+  -length : property of an array that returns total number of items 
+            value starts from 1
+
+  - Array in javascript is infinite 
+
+
+  - Different way to access array item 
+    1) for - give index 
+    2) for in - given index 
+    3) for of - given item in the array
+               
+  -Array methord
+  ----------------
+        1)push - add item to an array at the end 
+        2) unshift - add item to an array at start
+        3) pop - delete the last item of the array
+        4)shift - delete the first item of the arrat 
+        5)sort (callback) - rearrange the array in ascending (a-b) or deccending order - (b-a) - no new array is formed 
+        6)forEach() - same as that of for of - return void
+        7)map(callback) - create new array having same number of elements as that of parent array
+        8)Reduce(callback) - return single value : Eg- highest, lowest ,sum 
+        9)filter() - to create an array satisfying a specific condition 
+        10) flat(depth) - 2d to 1d
+        11) find() - to find a single value from the array 
+        12)some() - to check a condition is true or false 
+        13) include() - to find an element is there in an array or not - true only boolean value 
+        14) splice() - to remove or add items into an array at different positions 
+        15) indexOf() - to find an element is there in an array at diffrent positions 
+        16) slice(index) -remove one element at a time 
+        17) reducerright() - function is same as that of reduce but itration starts from right  
+
+    - Nested array : array inside array 
+
+
+
+
+12) String : sequence of character stored in diffrent memory location 
+--------------
+
+     String Methods :
+     -----------------
+     1) startsWith : to check whether a given string starts with a particular letter/character case sensitive 
+     2) endsWith : to check whether a given string ends with a particular letter/character -case senstive 
+     3)substring(start,end) 
+     4)toUpperCase() - to convert into capital letter 
+     5)toLowerCase() - to convert into small letter 
+     6)trim() - to remove extra space 
+     7)slice(start,end)
+     8)split()
+     9) relace() - to replace a particular character/Word from given string -change the first maching word 
+     10)replaceAll() - to replac a particular character/ word from a given string - change the alla matching word
+     11) array.from() - it converts string into an array  
+
+
+13)object :
+-----------
+  
+   -unlike array it can store more than one data with higher clarity
+   -Definition : object is a single variable that can store more than one data of different datatype as key:value pair , that are separated by commas and enclosed within curly bracket 
+
+
+   Syntax
+   -------
+
+    variable_name={
+        key1: value1,
+        key2: value2,...
+        keyn: valuen
+    }
+
+    -to access item
+     --------------
+      object_name.key
+      object_name["key"]
+
+
+    -add an item to objects 
+    ------------------------
+        object_name["key"]=value
+        object.assign 
+
+    -delete an item from object
+    ---------------------------
+    delete object_name.key 
+
+    -To update item 
+    ---------------- 
+      object_name["key"] = value
+      object_name.key+=value - incriment value , similary document (-=)
+
+    
+    -Array of objects - objects inside an array 
+    ------------------
+
+
+
+
+OBJECT ORIENTED PROGRAMING(oops) - it is a modern programing paradigm(style) which 
+consider real time entity as oobjects and class.
+
+    -Basic 
+    -------
+
+    1)class - Blueprint which contain common feature from which different objects can be created 
+    2)object - is the real time entity created from the class
+    3)reference - memory location where properties and methods are stored 
+
+- property - the variables inside a class 
+- methods - function inside a class
+- instance variable - this.property_name - to access property or method anywhere inside a class 
+
+
+ syntax class
+ -------------
+  class classname {
+    -property 
+    -constructor 
+    -method 
+  }
+
+
+
+  syntax of object
+  ------------------
+
+  variable_name = new class_name
+
+=>pillers of oops
+-----------------
+
+1)Inheritance 
+2)polymorphism
+3)encapsulation
+4)abstraction
+
+  Inheritance : properties and method can be accessed by child from the parent 
+
+
+  parent class : based class / super class 
+  child classs : drived classs / sub class 
+
+  two type of Inheritance
+  -----------------------
+  1) classical Inhritance - keyword extends 
+  2) object inheritance/prototype Inheritance
+
+
+  -multilevel inheritance 
+
+
+  polymorphism:
+  ----------------
+  poly : many 
+  morphism : form 
+
+
+  1)function/method overloding - mthod with same name and different number  arguments/parameter 
+  -javascript doesnot method overloding 
+  - spred oprator (...) - return array of arguments 
+
+  2)function/method ovrriding - methods with same name and same number of arguments 
+   work last created method 
+   -javascript support this concept
+
+
+exeption handling 
+-----------------
+Exption : run time error 
+-javaScript handle exception using 
+
+1)Try : statement that might cause error 
+2)catch : statement that need to be exection when error occur 
+3)finally : statement that need to be executed in both cases 
+-------------------------------------
+
+ 
+ javascript in frontend 
+ =======================
+
+ brower engine : html file css file , javascript file 
+ javascript cannot read html css file directly 
+
+ DOM - Document object model 
+ ----------------------------
+ tree structure of html file created browser 
+ - javascript can access DOM 
+
+
+BOM - browser object model 
+
+
+How to applay Javascript 
+-------------------------
+1)Internal JS - <script>js code </script>  -  </body> prefer reduce loding time of webpage 
+2)External js - <script src="url"></script>
+
+
+How to access html tag js 
+---------------------------
+1)Document.getElementBytagName('tagname')  - HtmlCollection - hold more than one html element 
+2)Document.getElementById('id')- return tags
+3)Document.getElementByClassName('class_name') - return Htmlcollection
+4)Document.querySelector('tagname/#id/.class_name') -return nodelist 
+
+-----------------------------------------------------------
+
+how to access content inside html tag
+--------------------------------------
+1).innerHTML 
+
+textcontent Document.write()
+-----------------------------
+
+
+Events: action performed by the user that lead to a change in DOM 
+
+1) click
+2) change 
+3) submit 
+4) load 
+5) keydown
+
+
+webpage 
+1) vot eligibility
+2) clock 
+3) to do list 
+ 

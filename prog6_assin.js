@@ -1,0 +1,10 @@
+a=5+6
+b=5-3
+c=9/3
+d=45%4
+e=5**2
+console.log(`adition${a}`)
+console.log(`substraction${b}`)
+console.log(`divition${c}`)
+console.log(`modelous${d}`)
+console.log(`2multi${e}`)
