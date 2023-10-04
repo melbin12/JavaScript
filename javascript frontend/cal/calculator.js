@@ -3,7 +3,11 @@ function display(num){
 }
 
 function equal(){
-    result.value = eval(result.value)
+    try{result.value = eval(result.value)}
+    catch{
+        result.value = "error"
+        setTimeout(()=>{result.value=""},1000)
+    }
 }
 
 function clearAll(){
