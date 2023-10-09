@@ -48,18 +48,31 @@
        <!-- Section-->
        <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div id="result" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">      
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    fetch('https://fakestoreapi.com/products').then((Response)=>{
+        Response.json()//unnecesary - return promise
+        .then((products)=>{
+            console.log(products);
+            products.forEach(products=>{
+                result.innerHTML +=`
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" hight="250px" src=${products.image} alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Fancy Product</h5>
+                                <h5 class="fw-bolder">${products.title.slice(0,25)}..</h5>
                                 <!-- Product price-->
-                                $40.00 - $80.00
+                                $${products.price}
+                                <p>category:${products.category}</p>
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -67,13 +80,11 @@
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                         </div>
                     </div>
-                </div>
-        
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
+                </div>`
+            })
+        })
+        console.log(Response)
+    }).catch((Error)=>{console.log(error);})
+</script>
 </html>
 
